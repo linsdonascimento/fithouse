@@ -11,41 +11,35 @@ import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
   styleUrls: ['./lista-alunos.page.scss'],
 })
 export class ListaAlunosPage implements OnInit {
- 
-
-loading : boolean;
-ListaAlunos : Aluno[]
 
 
-  
- 
+  ListaAlunos: Aluno[];
 
+  loading: boolean;
 
   constructor(public modalController: ModalController, public dbService: DBService, public toastController: ToastController) {
 
-    this.ngOnInit;
-
-
-   }
-
-   async ngOnInit(){
-     this.loading = true;
-
-     await this.LoadingListaAlunos();
-    }
-     private async LoadingListaAlunos() {
-      this.dbService.listWithUIDs<Aluno>('/alunos')
-        .then(ListaAlunos => {
-          this.ListaAlunos = this.ListaAlunos;
-
-          this.loading = false;
-        }).catch(error => {
-          console.log(error);
-        });
-    
   }
 
- 
+  async ngOnInit() {
+    this.loading = true;
+
+    await this.LoadingListaAlunos();
+  }
+  
+  private async LoadingListaAlunos() {
+    this.dbService.listWithUIDs<Aluno>('/alunos')
+      .then(_ListaAlunosPage => {
+        this.ListaAlunos = _ListaAlunosPage;
+
+        this.loading = false;
+      }).catch(error => {
+        console.log(error);
+      });
+
+  }
+
+
 
   async add() {
     const modal = await this.modalController.create({
@@ -59,7 +53,7 @@ ListaAlunos : Aluno[]
         }
       });
 
-    return  await modal.present();
+    return await modal.present();
   }
 
   private confirmAdd() {
@@ -85,5 +79,4 @@ ListaAlunos : Aluno[]
 
 
 
-  }
-   
+}

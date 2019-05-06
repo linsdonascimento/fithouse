@@ -7,15 +7,15 @@
 <ion-content padding>
    
         <div *ngIf="!loading">
-            <ion-card *ngFor="let aluno of alunos">
+            <ion-card *ngFor="let aluno of ListaAlunos">
               <ion-item>
-                <ion-icon (click)="edit(Aluno)" color="blue" name="create" slot="end"></ion-icon>
-                <ion-icon (click)="remove(Aluno.uid)" color="danger" name="trash" slot="end"></ion-icon>
+                <ion-icon (click)="edit(aluno)" color="blue" name="create" slot="end"></ion-icon>
+                <ion-icon (click)="remove(aluno.uid)" color="danger" name="trash" slot="end"></ion-icon>
                 <ion-label>{{ aluno.nome }}</ion-label>
               </ion-item>
             
               <ion-card-content>
-                {{ Aluno.email }}
+                {{ aluno.email }}
               </ion-card-content>
             </ion-card>
           </div>
