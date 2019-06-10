@@ -46,7 +46,7 @@ export class LoginPage implements OnInit {
   }
 
   newAluno() {
-    this.router.navigate(['/register']);
+    this.router.navigate(['/registereducador']);
   }
   OnInit() {
   }
