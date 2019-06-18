@@ -30,7 +30,7 @@ export class LoginPage implements OnInit {
   login() {
     this.afAuth.auth.signInWithEmailAndPassword(this.aluno.email, this.aluno.senha)
       .then(result => {
-        this.router.navigate(['/lista-alunos']);
+        this.router.navigate(['/perfil']);
       }).catch(error => {
         this.presentToast('E-mail e/ou senha inválido(s).');
         delete this.aluno.senha;

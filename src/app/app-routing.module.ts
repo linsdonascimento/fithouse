@@ -5,10 +5,14 @@ const routes: Routes = [
   { path: '', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
   { path: 'menu', loadChildren: './menu/menu.module#MenuPageModule' },
-  { path: 'cadastro', loadChildren: './cadastro/cadastro.module#CadastroPageModule' },
   { path: 'lista-alunos', loadChildren: './lista-alunos/lista-alunos.module#ListaAlunosPageModule' },
-  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },  { path: 'educador', loadChildren: './educador/educador.module#EducadorPageModule' },
+  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'registereducador', loadChildren: './registereducador/registereducador.module#RegistereducadorPageModule' },
+  { path: 'perfil', loadChildren: './perfil/perfil.module#PerfilPageModule' },
+  { path: 'ficha', loadChildren: './ficha/ficha.module#FichaPageModule' },
+  { path: 'mensagem', loadChildren: './mensagem/mensagem.module#MensagemPageModule' },  { path: 'list-exercicio', loadChildren: './list-exercicio/list-exercicio.module#ListExercicioPageModule' },
+
+
 
 
 ];
