@@ -10,7 +10,10 @@ const routes: Routes = [
   { path: 'registereducador', loadChildren: './registereducador/registereducador.module#RegistereducadorPageModule' },
   { path: 'perfil', loadChildren: './perfil/perfil.module#PerfilPageModule' },
   { path: 'ficha', loadChildren: './ficha/ficha.module#FichaPageModule' },
-  { path: 'mensagem', loadChildren: './mensagem/mensagem.module#MensagemPageModule' },  { path: 'list-exercicio', loadChildren: './list-exercicio/list-exercicio.module#ListExercicioPageModule' },
+  { path: 'mensagem', loadChildren: './mensagem/mensagem.module#MensagemPageModule' },
+  { path: 'list-exercicio', loadChildren: './list-exercicio/list-exercicio.module#ListExercicioPageModule' },  { path: 'addexercicio', loadChildren: './addexercicio/addexercicio.module#AddexercicioPageModule' },
+
+  
 
 
 

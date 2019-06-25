@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Adicionar Exercicio</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <div>
+      <ion-item class="bg-transparente">
+          <ion-label position="floating">Nome</ion-label>
+          <ion-input type="text" [(ngModel)]="exercicio.nome"></ion-input>
+        </ion-item>
+  
+        <ion-item class="bg-transparente">
+          <ion-label position="floating">Descrição</ion-label>
+          <ion-input type="email" [(ngModel)]="exercicio.descricao"></ion-input>
+        </ion-item>
+  
+        
+    </div>
+      <ion-row>
+        <ion-button (click)="salvar()"> Salvar </ion-button>
+      </ion-row>
+  
+  </ion-content>
